@@ -1,0 +1,109 @@
+.signup-bg {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh;
+  gap: 1rem;
+
+  .form-div {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4rem;
+
+    .crtl-btn {
+      display: flex;
+
+      .btn {
+        height: 2.5rem;
+      }
+    }
+  }
+}
+
+.signup-bg > * {
+  display: flex;
+  align-items: center;
+}
+
+.signup-bg > div:first-child {
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.856), #4b627ea4),
+    url("../components/images/carbg.jpg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.form {
+  width: 30em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem 0.5rem;
+  box-shadow: 1rem 1rem 2rem #4b627ea4;
+  border-radius: 5px;
+
+  h2 {
+    font-size: 2rem;
+    margin: 0;
+    margin: 0.4rem 0;
+  }
+}
+
+.form > div:first-child {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+
+  .circles {
+    background-color: #4f9aff;
+    width: auto;
+    border-radius: 50%;
+  }
+}
+
+.form-example {
+  width: 80%;
+  margin: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+
+  input {
+    height: 1.8rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .signup-bg {
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+  }
+  .signup-bg > div:first-child {
+    display: none;
+  }
+  .signup-form {
+    width: 25rem;
+  }
+  .form-example input {
+    height: 2rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .signup-form {
+    width: 20rem;
+  }
+
+  .signup-bg {
+    .form-div {
+      padding-top: 1rem;
+    }
+  }
+}
